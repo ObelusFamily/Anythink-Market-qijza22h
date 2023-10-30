@@ -35,12 +35,11 @@ return [
 
     'connections' => [
         
-            'mongodb' => [
-                  'driver' => 'mongodb',
-                  'dsn' => env('DB_URI', 'mongodb+srv://nebsta9:M12GhLEAcMAe9CaF@phpvirtualevent.xzk3pyb.mongodb.net/?retryWrites=true&w=majority'),       
-                    
-                  'database' => 'myappdb',
-          ],
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('MONGODB_URI'),
+            'database' => 'moviesquest',
+            ],
 
         'sqlite' => [
             'driver' => 'sqlite',
