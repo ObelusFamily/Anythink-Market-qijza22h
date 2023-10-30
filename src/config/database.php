@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,6 +34,13 @@ return [
     */
 
     'connections' => [
+        
+            'mongodb' => [
+                  'driver' => 'mongodb',
+                  'dsn' => env('DB_URI', 'mongodb+srv://nebsta9:M12GhLEAcMAe9CaF@phpvirtualevent.xzk3pyb.mongodb.net/?retryWrites=true&w=majority'),       
+                    
+                  'database' => 'myappdb',
+          ],
 
         'sqlite' => [
             'driver' => 'sqlite',
@@ -92,6 +99,7 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
+        
 
     ],
 
